@@ -100,10 +100,10 @@ header img {
 	font-size: 1.4em;
 }
 .temp-container::before {
-	content: 'Current room temperature (C): ';
+	content: ' ';
 }
 .hum-container::before {
-	content: 'Current room humidity (%): ';
+	content: ' ';
 }
 .temp, .hum {      
 	display: inline-block;
@@ -340,12 +340,12 @@ input[type=checkbox] {
 }
 label[for=door] .toggle-button:before {
 	content: "Start";
-	padding-left: 10px;
+	padding-left: 30px;
 
 }
 label[for=door] .toggle-button:after {
 	content: "Stop";
-	padding-left: 4px;
+	padding-left: 30px;
 }
 .toggle-button .switch { 
 	display: block;
