@@ -60,7 +60,7 @@ p, footer {
 }
 footer {
 	clear: both;
-	text-align: left;
+	text-align: right;
 	margin-top: 4em;
 }
 footer .credit {
@@ -93,11 +93,68 @@ header img {
 .pref-container {
 	margin-bottom: 2em;
 }
+.temp-hum-display {
+	margin-bottom: 2em;
+}
+.temp-container, .hum-container {
+	font-size: 1.4em;
+}
+.temp-container::before {
+	content: ' ';
+}
+.hum-container::before {
+	content: ' ';
+}
+.temp, .hum {      
+	display: inline-block;
+}
+.wet::after {
+	content: "\f043";
+	padding-left: 10px;
+	color: #bbe4fd;
+}
 
-
+@media (min-width: 768px) {
+	.container {
+		min-width: 768px;
+		max-width: 1200px;
+		display: -webkit-flex;
+		-webkit-flex-direction: row-reverse;
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.pref-container {
+		width: 480px;
+	}
+	.temp-hum-display {
+		flex-grow: 1;
+		-webkit-flex-grow: 1;
+		text-align: center;
+	}
+	.temp-container::before, .hum-container::before {
+		content: '';
+	}
+	.temp, .hum {      
+		font-size: 160px;
+		opacity: 0.2;
+	}
+	.hum {
+		position: relative;
+		left: 10px;
+	}
+	.temp span, .hum span {
+		font-size: 0.5em;
+		vertical-align: top;
+		position: relative;
+	  top: 26px;
+	}
+}
 @media (min-width: 1024px) {
 	.pref-container {
 		width: 600px;
+	}
+	.temp, .hum {      
+		font-size: 160px;
 	}
 }
 
@@ -112,7 +169,12 @@ header img {
     position: relative;
     left: 150px;
 }
-
+.temp::before {
+	content: attr(data-temperature);
+}
+.hum::before {
+	content: attr(data-humidity);
+}
 .preference {
 	margin-bottom: 2em;
 	border: 1px solid rgba(192, 192, 192, 0.15);
@@ -172,7 +234,13 @@ label.brightness::after {
 	top: 17px;
 	color: #C9B559;
 }
-
+label.fire::before {
+	content: "\f06d";
+}
+label.fire::after {
+	content: "\f06d";
+	color: #D34138;
+}
 .text {
 	font-size: 0.9rem;
 	line-height: 1.2em;
@@ -261,13 +329,21 @@ input[type=checkbox] {
 	font-size: 16px;
 	text-shadow: 0 -1px 1px #093B5C;
 }
+.toggle-button:before {
+	content: "ON";
+	padding-left: 28px;
 
-label[for=motoren] .toggle-button:before {
+}
+.toggle-button:after {
+	content: "OFF";
+	padding-left: 42px;
+}
+label[for=door] .toggle-button:before {
 	content: "Start";
 	padding-left: 30px;
 
 }
-label[for=motoren] .toggle-button:after {
+label[for=door] .toggle-button:after {
 	content: "Stop";
 	padding-left: 30px;
 }

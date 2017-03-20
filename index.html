@@ -26,29 +26,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<div class="pubnub"></div>
 	</header>
 	<section class="container">
+
+		<section class="temp-hum-display">
+			<section class="temp-container">
+				<div class="temp" data-temperature="."><span> </span></div>
+			</section>
+			<section class="hum-container">
+				<div class="hum" data-humidity="."><span class=" "> </span></div>
+			</section>
+		</section>
+
 		<section class="pref-container">
 			<section class="preference">
 				<div>
 					<div class="caption">ENABLE</div>
-					<label for="motoren">
-						<input id="motoren" type="checkbox">
+					<label for="door">
+						<input id="door" type="checkbox">
 						<div class="toggle-button">
 							<div class="switch"></div>
 						</div>
 					</label>
 				</div>
+
 				<div>
 					<div class="caption">MOTOR SPEED</div>
-					<label for="motorspd" class="brightness fa">
-						<input id="motorspd" type="range" min="0" max="100" step="1" value="0">
+					<label for="light-living" class="brightness fa">
+						<input id="lightLiving" type="range" min="0" max="10" step="1" value="0">
 					</label>
 				</div>
+				
 			</section>
+
 		</section>
+
 	</section>
 
 	<footer>
-      <div> RPi  DC Motor Speed V1.f<strong>.</strong></div>
+
 	</footer>
 
 	<script src="http://cdn.pubnub.com/pubnub-3.7.11.min.js"></script>
