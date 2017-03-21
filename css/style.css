@@ -345,7 +345,7 @@ label[for=door] .toggle-button:before {
 }
 label[for=door] .toggle-button:after {
 	content: "Stop";
-	padding-left: 20px;
+	padding-left: 40px;
 }
 .toggle-button .switch { 
 	display: block;
