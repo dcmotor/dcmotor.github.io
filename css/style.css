@@ -339,13 +339,13 @@ input[type=checkbox] {
 	padding-left: 42px;
 }
 label[for=door] .toggle-button:before {
-	content: "OPENED";
-	padding-left: 10px;
+	content: "Start";
+	padding-left: 40px;
 
 }
 label[for=door] .toggle-button:after {
-	content: "CLOSED";
-	padding-left: 4px;
+	content: "Stop";
+	padding-left: 40px;
 }
 .toggle-button .switch { 
 	display: block;
