@@ -60,7 +60,7 @@ p, footer {
 }
 footer {
 	clear: both;
-	text-align: right;
+	text-align: left;
 	margin-top: 4em;
 }
 footer .credit {
