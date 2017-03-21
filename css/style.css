@@ -340,12 +340,12 @@ input[type=checkbox] {
 }
 label[for=door] .toggle-button:before {
 	content: "Start";
-	padding-left: 30px;
+	padding-left: 20px;
 
 }
 label[for=door] .toggle-button:after {
 	content: "Stop";
-	padding-left: 30px;
+	padding-left: 20px;
 }
 .toggle-button .switch { 
 	display: block;
